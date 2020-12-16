@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.loadButton = new System.Windows.Forms.Button();
             this.weightDataGridView = new System.Windows.Forms.DataGridView();
             this.chartMeasurments = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -90,6 +90,8 @@
             // 
             // weightDataGridView
             // 
+            this.weightDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.weightDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.weightDataGridView.Location = new System.Drawing.Point(12, 271);
             this.weightDataGridView.Name = "weightDataGridView";
@@ -100,17 +102,20 @@
             // 
             // chartMeasurments
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chartMeasurments.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chartMeasurments.Legends.Add(legend3);
+            this.chartMeasurments.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            chartArea1.Name = "ChartArea1";
+            this.chartMeasurments.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartMeasurments.Legends.Add(legend1);
             this.chartMeasurments.Location = new System.Drawing.Point(826, 134);
             this.chartMeasurments.Name = "chartMeasurments";
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chartMeasurments.Series.Add(series3);
-            this.chartMeasurments.Size = new System.Drawing.Size(459, 506);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chartMeasurments.Series.Add(series1);
+            this.chartMeasurments.Size = new System.Drawing.Size(474, 506);
             this.chartMeasurments.TabIndex = 2;
             this.chartMeasurments.Text = "chart1";
             // 
