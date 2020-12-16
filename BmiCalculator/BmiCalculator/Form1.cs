@@ -15,12 +15,13 @@ namespace BmiCalculator
     public partial class Form1 : Form
     {
         BindingList<Measurement> measurements = new BindingList<Measurement>();
+        decimal bmi;
         public Form1()
         {
 
             InitializeComponent();
-
             weightDataGridView.DataSource = measurements;
+
         }
 
         private void loadButton_Click(object sender, EventArgs e)
@@ -55,6 +56,7 @@ namespace BmiCalculator
             LoadChart();
             textBoxWeight.Text = measurements[measurements.Count - 1].Weight.ToString();
             textBoxHeight.Text = measurements[measurements.Count - 1].Height.ToString();
+            CalculateBmi();
         }
 
         private void LoadChart()
@@ -75,6 +77,15 @@ namespace BmiCalculator
             chartArea.AxisX.MajorGrid.Enabled = false;
             chartArea.AxisY.MajorGrid.Enabled = false;
             chartArea.AxisY.IsStartedFromZero = false;
+        }
+
+        private void CalculateBmi()
+        {
+            if (textBoxWeight.Text != "" & textBoxHeight.Text != "")
+            {
+                bmi = decimal.Parse(textBoxWeight.Text) / ((decimal.Parse(textBoxHeight.Text) / 100) * (decimal.Parse(textBoxHeight.Text) / 100));
+                labelBmiValue.Text = Math.Round(bmi, 2).ToString();
+            }
         }
 
         private void buttonAddAndSave_Click(object sender, EventArgs e)
@@ -110,6 +121,16 @@ namespace BmiCalculator
                     sw.WriteLine(); // Ez a sor az alábbi módon is írható: sr.Write("\n");
                 }
             }
+        }
+
+        private void textBoxWeight_TextChanged(object sender, EventArgs e)
+        {
+            CalculateBmi();
+        }
+
+        private void textBoxHeight_TextChanged(object sender, EventArgs e)
+        {
+            CalculateBmi();
         }
     }
 }
