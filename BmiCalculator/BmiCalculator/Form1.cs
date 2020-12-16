@@ -49,8 +49,12 @@ namespace BmiCalculator
 
                     measurements.Add(m);
                 }
+
+                
             }
             LoadChart();
+            textBoxWeight.Text = measurements[measurements.Count - 1].Weight.ToString();
+            textBoxHeight.Text = measurements[measurements.Count - 1].Height.ToString();
         }
 
         private void LoadChart()
@@ -73,5 +77,39 @@ namespace BmiCalculator
             chartArea.AxisY.IsStartedFromZero = false;
         }
 
+        private void buttonAddAndSave_Click(object sender, EventArgs e)
+        {
+            Measurement lm = new Measurement();
+            lm.MeasurDate = Convert.ToDateTime(DateTime.Now);
+            lm.Weight = decimal.Parse(textBoxWeight.Text);
+            lm.Height = decimal.Parse(textBoxHeight.Text);
+            measurements.Add(lm);
+
+            SaveFileDialog sfd = new SaveFileDialog();
+
+            sfd.InitialDirectory = Application.StartupPath; 
+            sfd.Filter = "Comma Seperated Values (*.csv)|*.csv"; 
+            sfd.DefaultExt = "csv";
+            sfd.AddExtension = true;
+
+             if (sfd.ShowDialog() != DialogResult.OK) return;
+
+            using (StreamWriter sw = new StreamWriter(sfd.FileName, false, Encoding.UTF8))
+            {
+                sw.Write("Dátum;Súly;Magasság");
+                sw.WriteLine();
+
+                foreach (var m in measurements)
+                {
+                    sw.Write(m.MeasurDate.ToString());
+                    sw.Write(";");
+                    sw.Write(m.Weight.ToString());
+                    sw.Write(";");
+                    sw.Write(m.Height.ToString());
+                    sw.Write(";");
+                    sw.WriteLine(); // Ez a sor az alábbi módon is írható: sr.Write("\n");
+                }
+            }
+        }
     }
 }
