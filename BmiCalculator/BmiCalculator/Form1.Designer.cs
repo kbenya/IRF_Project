@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.loadButton = new System.Windows.Forms.Button();
             this.weightDataGridView = new System.Windows.Forms.DataGridView();
             this.chartMeasurments = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -100,16 +100,16 @@
             // 
             // chartMeasurments
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chartMeasurments.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chartMeasurments.Legends.Add(legend2);
+            chartArea3.Name = "ChartArea1";
+            this.chartMeasurments.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chartMeasurments.Legends.Add(legend3);
             this.chartMeasurments.Location = new System.Drawing.Point(826, 134);
             this.chartMeasurments.Name = "chartMeasurments";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chartMeasurments.Series.Add(series2);
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.chartMeasurments.Series.Add(series3);
             this.chartMeasurments.Size = new System.Drawing.Size(459, 506);
             this.chartMeasurments.TabIndex = 2;
             this.chartMeasurments.Text = "chart1";

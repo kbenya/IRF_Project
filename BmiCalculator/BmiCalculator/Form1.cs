@@ -95,6 +95,18 @@ namespace BmiCalculator
                 labelBmiValue.Text = Math.Round(bmi, 2).ToString();
             }
 
+            if (bmi >= decimal.Parse("18,5") & bmi <= decimal.Parse("25"))
+            {
+                labelStatus.Text = "Normál";
+            }
+            if (bmi < decimal.Parse("18,5"))
+            {
+                labelStatus.Text = "Sovány";
+            }
+            if (bmi > decimal.Parse("25"))
+            {
+                labelStatus.Text = "Túlsúlyos";
+            }
             ShowReaction();
         }
 
