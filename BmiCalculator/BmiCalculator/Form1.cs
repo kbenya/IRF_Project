@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace BmiCalculator
 {
@@ -48,7 +49,27 @@ namespace BmiCalculator
                     measurements.Add(m);
                 }
             }
+            LoadChart();
         }
-    
+
+        private void LoadChart()
+        {
+            chartMeasurments.DataSource = measurements;
+
+            var series = chartMeasurments.Series[0];
+            series.ChartType = SeriesChartType.Line;
+            series.XValueMember = "MeasurDate";
+            series.YValueMembers = "Weight";
+            series.BorderWidth = 2;
+
+            var legend = chartMeasurments.Legends[0];
+            legend.Enabled = false;
+
+            var chartArea = chartMeasurments.ChartAreas[0];
+            chartArea.AxisX.MajorGrid.Enabled = false;
+            chartArea.AxisY.MajorGrid.Enabled = false;
+            chartArea.AxisY.IsStartedFromZero = false;
+        }
+
     }
 }
