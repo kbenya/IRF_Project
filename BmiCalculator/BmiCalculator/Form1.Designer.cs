@@ -28,27 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.loadButton = new System.Windows.Forms.Button();
             this.weightDataGridView = new System.Windows.Forms.DataGridView();
             this.chartMeasurments = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.labelBmiValue = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.buttonAddAndSave = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.weightDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartMeasurments)).BeginInit();
             this.SuspendLayout();
             // 
             // loadButton
             // 
-            this.loadButton.Location = new System.Drawing.Point(27, 152);
+            this.loadButton.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loadButton.Location = new System.Drawing.Point(12, 203);
             this.loadButton.Name = "loadButton";
-            this.loadButton.Size = new System.Drawing.Size(141, 67);
+            this.loadButton.Size = new System.Drawing.Size(141, 92);
             this.loadButton.TabIndex = 0;
             this.loadButton.Text = "Súly adatok betöltése";
             this.loadButton.UseVisualStyleBackColor = true;
@@ -57,25 +61,25 @@
             // weightDataGridView
             // 
             this.weightDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.weightDataGridView.Location = new System.Drawing.Point(366, 225);
+            this.weightDataGridView.Location = new System.Drawing.Point(12, 301);
             this.weightDataGridView.Name = "weightDataGridView";
             this.weightDataGridView.RowHeadersWidth = 62;
             this.weightDataGridView.RowTemplate.Height = 28;
-            this.weightDataGridView.Size = new System.Drawing.Size(364, 385);
+            this.weightDataGridView.Size = new System.Drawing.Size(370, 300);
             this.weightDataGridView.TabIndex = 1;
             // 
             // chartMeasurments
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chartMeasurments.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chartMeasurments.Legends.Add(legend1);
+            chartArea2.Name = "ChartArea1";
+            this.chartMeasurments.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chartMeasurments.Legends.Add(legend2);
             this.chartMeasurments.Location = new System.Drawing.Point(773, 152);
             this.chartMeasurments.Name = "chartMeasurments";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chartMeasurments.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chartMeasurments.Series.Add(series2);
             this.chartMeasurments.Size = new System.Drawing.Size(475, 458);
             this.chartMeasurments.TabIndex = 2;
             this.chartMeasurments.Text = "chart1";
@@ -100,16 +104,6 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Jelenlegi súly:";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(23, 121);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(165, 19);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "(ha nincs betöltendő adat)";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -122,7 +116,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(174, 83);
+            this.textBox1.Location = new System.Drawing.Point(226, 83);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 26);
             this.textBox1.TabIndex = 7;
@@ -137,15 +131,55 @@
             this.labelBmiValue.TabIndex = 8;
             this.labelBmiValue.Text = "--";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(22, 132);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(198, 27);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Jelenlegi magasság:";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(226, 134);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 26);
+            this.textBox2.TabIndex = 10;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(65, 169);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(88, 19);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "(ha változott)";
+            // 
+            // buttonAddAndSave
+            // 
+            this.buttonAddAndSave.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAddAndSave.Location = new System.Drawing.Point(190, 203);
+            this.buttonAddAndSave.Name = "buttonAddAndSave";
+            this.buttonAddAndSave.Size = new System.Drawing.Size(192, 92);
+            this.buttonAddAndSave.TabIndex = 12;
+            this.buttonAddAndSave.Text = "Új adatok hozzáadása és mentése";
+            this.buttonAddAndSave.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1260, 622);
+            this.Controls.Add(this.buttonAddAndSave);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.labelBmiValue);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.chartMeasurments);
@@ -167,10 +201,13 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart chartMeasurments;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label labelBmiValue;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button buttonAddAndSave;
     }
 }
 
