@@ -34,13 +34,15 @@
             this.loadButton = new System.Windows.Forms.Button();
             this.weightDataGridView = new System.Windows.Forms.DataGridView();
             this.chartMeasurments = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.weightDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartMeasurments)).BeginInit();
             this.SuspendLayout();
             // 
             // loadButton
             // 
-            this.loadButton.Location = new System.Drawing.Point(72, 400);
+            this.loadButton.Location = new System.Drawing.Point(444, 290);
             this.loadButton.Name = "loadButton";
             this.loadButton.Size = new System.Drawing.Size(184, 38);
             this.loadButton.TabIndex = 0;
@@ -51,7 +53,7 @@
             // weightDataGridView
             // 
             this.weightDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.weightDataGridView.Location = new System.Drawing.Point(12, 12);
+            this.weightDataGridView.Location = new System.Drawing.Point(647, 153);
             this.weightDataGridView.Name = "weightDataGridView";
             this.weightDataGridView.RowHeadersWidth = 62;
             this.weightDataGridView.RowTemplate.Height = 28;
@@ -64,7 +66,7 @@
             this.chartMeasurments.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chartMeasurments.Legends.Add(legend1);
-            this.chartMeasurments.Location = new System.Drawing.Point(517, -5);
+            this.chartMeasurments.Location = new System.Drawing.Point(39, 153);
             this.chartMeasurments.Name = "chartMeasurments";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
@@ -74,11 +76,32 @@
             this.chartMeasurments.TabIndex = 2;
             this.chartMeasurments.Text = "chart1";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(335, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(511, 41);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "BMI kalkulátor és testsúly követés";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(440, 88);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(51, 20);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "label2";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1243, 459);
+            this.ClientSize = new System.Drawing.Size(1189, 520);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.chartMeasurments);
             this.Controls.Add(this.weightDataGridView);
             this.Controls.Add(this.loadButton);
@@ -87,6 +110,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.weightDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartMeasurments)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -95,6 +119,8 @@
         private System.Windows.Forms.Button loadButton;
         private System.Windows.Forms.DataGridView weightDataGridView;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartMeasurments;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 

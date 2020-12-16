@@ -59,6 +59,7 @@ namespace BmiCalculator
             var series = chartMeasurments.Series[0];
             series.ChartType = SeriesChartType.Line;
             series.XValueMember = "MeasurDate";
+            series.XValueType = ChartValueType.Date;
             series.YValueMembers = "Weight";
             series.BorderWidth = 2;
 
