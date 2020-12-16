@@ -10,5 +10,7 @@ namespace BmiCalculator
     {
         public DateTime MeasurDate { get; set; }
         public decimal Weight { get; set; }
+
+        public decimal Height { get; set; }
     }
 }

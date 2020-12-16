@@ -45,6 +45,7 @@ namespace BmiCalculator
                     Measurement m = new Measurement();
                     m.MeasurDate = Convert.ToDateTime(sor[0]);
                     m.Weight = decimal.Parse(sor[1]);
+                    m.Height = decimal.Parse(sor[2]);
 
                     measurements.Add(m);
                 }
