@@ -15,7 +15,7 @@ namespace BmiCalculator
     public partial class Form1 : Form
     {
         BindingList<Measurement> measurements = new BindingList<Measurement>();
-        decimal bmi;
+        public decimal bmi;
         public Form1()
         {
 
@@ -86,6 +86,7 @@ namespace BmiCalculator
                 bmi = decimal.Parse(textBoxWeight.Text) / ((decimal.Parse(textBoxHeight.Text) / 100) * (decimal.Parse(textBoxHeight.Text) / 100));
                 labelBmiValue.Text = Math.Round(bmi, 2).ToString();
             }
+
         }
 
         private void buttonAddAndSave_Click(object sender, EventArgs e)

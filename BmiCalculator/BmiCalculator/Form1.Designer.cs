@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.loadButton = new System.Windows.Forms.Button();
             this.weightDataGridView = new System.Windows.Forms.DataGridView();
             this.chartMeasurments = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -42,6 +42,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxHeight = new System.Windows.Forms.TextBox();
             this.buttonAddAndSave = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.labelStatus = new System.Windows.Forms.Label();
+            this.advice1 = new BmiCalculator.Advice();
             ((System.ComponentModel.ISupportInitialize)(this.weightDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartMeasurments)).BeginInit();
             this.SuspendLayout();
@@ -64,22 +67,22 @@
             this.weightDataGridView.Name = "weightDataGridView";
             this.weightDataGridView.RowHeadersWidth = 62;
             this.weightDataGridView.RowTemplate.Height = 28;
-            this.weightDataGridView.Size = new System.Drawing.Size(370, 300);
+            this.weightDataGridView.Size = new System.Drawing.Size(523, 369);
             this.weightDataGridView.TabIndex = 1;
             // 
             // chartMeasurments
             // 
-            chartArea8.Name = "ChartArea1";
-            this.chartMeasurments.ChartAreas.Add(chartArea8);
-            legend8.Name = "Legend1";
-            this.chartMeasurments.Legends.Add(legend8);
-            this.chartMeasurments.Location = new System.Drawing.Point(773, 152);
+            chartArea2.Name = "ChartArea1";
+            this.chartMeasurments.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chartMeasurments.Legends.Add(legend2);
+            this.chartMeasurments.Location = new System.Drawing.Point(826, 134);
             this.chartMeasurments.Name = "chartMeasurments";
-            series8.ChartArea = "ChartArea1";
-            series8.Legend = "Legend1";
-            series8.Name = "Series1";
-            this.chartMeasurments.Series.Add(series8);
-            this.chartMeasurments.Size = new System.Drawing.Size(475, 458);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chartMeasurments.Series.Add(series2);
+            this.chartMeasurments.Size = new System.Drawing.Size(459, 506);
             this.chartMeasurments.TabIndex = 2;
             this.chartMeasurments.Text = "chart1";
             // 
@@ -152,19 +155,55 @@
             // buttonAddAndSave
             // 
             this.buttonAddAndSave.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAddAndSave.Location = new System.Drawing.Point(190, 173);
+            this.buttonAddAndSave.Location = new System.Drawing.Point(204, 173);
             this.buttonAddAndSave.Name = "buttonAddAndSave";
-            this.buttonAddAndSave.Size = new System.Drawing.Size(192, 92);
+            this.buttonAddAndSave.Size = new System.Drawing.Size(246, 92);
             this.buttonAddAndSave.TabIndex = 12;
             this.buttonAddAndSave.Text = "Új adatok hozzáadása és mentése";
             this.buttonAddAndSave.UseVisualStyleBackColor = true;
             this.buttonAddAndSave.Click += new System.EventHandler(this.buttonAddAndSave_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(432, 133);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(89, 27);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Állapot:";
+            // 
+            // labelStatus
+            // 
+            this.labelStatus.AutoSize = true;
+            this.labelStatus.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelStatus.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelStatus.Location = new System.Drawing.Point(570, 134);
+            this.labelStatus.Name = "labelStatus";
+            this.labelStatus.Size = new System.Drawing.Size(28, 27);
+            this.labelStatus.TabIndex = 14;
+            this.labelStatus.Text = "--";
+            // 
+            // advice1
+            // 
+            this.advice1.BackColor = System.Drawing.Color.White;
+            this.advice1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.advice1.Location = new System.Drawing.Point(556, 271);
+            this.advice1.Name = "advice1";
+            this.advice1.Size = new System.Drawing.Size(251, 202);
+            this.advice1.TabIndex = 15;
+            this.advice1.Text = "Kattints ide tanácsokért!";
+            this.advice1.UseVisualStyleBackColor = false;
+            this.advice1.Value = 0;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1260, 622);
+            this.ClientSize = new System.Drawing.Size(1312, 652);
+            this.Controls.Add(this.advice1);
+            this.Controls.Add(this.labelStatus);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.buttonAddAndSave);
             this.Controls.Add(this.textBoxHeight);
             this.Controls.Add(this.label3);
@@ -198,6 +237,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxHeight;
         private System.Windows.Forms.Button buttonAddAndSave;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label labelStatus;
+        private Advice advice1;
     }
 }
 
