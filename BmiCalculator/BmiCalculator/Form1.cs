@@ -22,6 +22,14 @@ namespace BmiCalculator
             InitializeComponent();
             weightDataGridView.DataSource = measurements;
 
+            reaction9.BackColor = Color.Gray;
+            reaction19.BackColor = Color.Gray;
+            reaction4.BackColor = Color.Gray;
+            reaction7.BackColor = Color.Gray;
+            reaction12.BackColor = Color.Gray;
+            reaction17.BackColor = Color.Gray;
+            reaction22.BackColor = Color.Gray;
+
         }
 
         private void loadButton_Click(object sender, EventArgs e)
@@ -87,6 +95,45 @@ namespace BmiCalculator
                 labelBmiValue.Text = Math.Round(bmi, 2).ToString();
             }
 
+            ShowReaction();
+        }
+
+        private void ShowReaction()
+        {
+            if (bmi < decimal.Parse("18,5") | bmi > decimal.Parse("25"))
+            {
+                reaction9.BackColor = Color.Red;
+                reaction19.BackColor = Color.Red;
+                reaction7.BackColor = Color.Red;
+                reaction12.BackColor = Color.Red;
+                reaction17.BackColor = Color.Red;
+                
+                reaction5.BackColor = Color.Red;
+                reaction21.BackColor = Color.Red;
+
+                reaction4.BackColor = Color.White;
+                reaction22.BackColor = Color.White;
+
+                reaction3.BackColor = Color.White;
+                reaction23.BackColor = Color.White;
+            }
+            else
+            {
+                reaction9.BackColor = Color.Green;
+                reaction19.BackColor = Color.Green;
+                reaction7.BackColor = Color.Green;
+                reaction12.BackColor = Color.Green;
+                reaction17.BackColor = Color.Green;
+
+                reaction5.BackColor = Color.White;
+                reaction21.BackColor = Color.White;
+
+                reaction4.BackColor = Color.White;
+                reaction22.BackColor = Color.White;
+
+                reaction3.BackColor = Color.Green;
+                reaction23.BackColor = Color.Green;
+            }
         }
 
         private void buttonAddAndSave_Click(object sender, EventArgs e)
