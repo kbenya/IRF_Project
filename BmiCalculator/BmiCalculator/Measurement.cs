@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BmiCalculator
 {
-    class Meres
+    class Measurement
     {
         public DateTime MeasurDate { get; set; }
         public decimal Weight { get; set; }

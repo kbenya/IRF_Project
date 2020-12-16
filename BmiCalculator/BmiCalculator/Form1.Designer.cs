@@ -41,6 +41,7 @@
             this.loadButton.TabIndex = 0;
             this.loadButton.Text = "Súly adatok betöltése";
             this.loadButton.UseVisualStyleBackColor = true;
+            this.loadButton.Click += new System.EventHandler(this.loadButton_Click);
             // 
             // weightDataGridView
             // 
@@ -49,7 +50,7 @@
             this.weightDataGridView.Name = "weightDataGridView";
             this.weightDataGridView.RowHeadersWidth = 62;
             this.weightDataGridView.RowTemplate.Height = 28;
-            this.weightDataGridView.Size = new System.Drawing.Size(295, 355);
+            this.weightDataGridView.Size = new System.Drawing.Size(368, 355);
             this.weightDataGridView.TabIndex = 1;
             // 
             // Form1
